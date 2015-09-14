@@ -22,7 +22,7 @@ public class ImportExp {
 			String realName = rs.getString("real_name");
 			String userName = rs.getString("user_name");
 			System.out.println(".....code:" + realName);
-			PreparedStatement ps1 = con.prepareStatement("update p_user set attribute2 = ? where user_name = ?");
+			PreparedStatement ps1 = con.prepareStatement("update p_dept set attribute2 = ? where user_name = ?");
 			String namePinying = PinyinHelper.convertToPinyinString(realName, "", PinyinFormat.WITHOUT_TONE);
 			ps1.setString(1, namePinying);
 			ps1.setString(2, userName);
